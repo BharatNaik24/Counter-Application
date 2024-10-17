@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+}
+
+.page__content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.page h3 {
+    font-weight: 300;
+    margin-bottom: 3rem;
+    max-width: 400px;
+}
+
+.flip-clock {
+    --fcc-flip-duration: 0.5s;
+    --fcc-spacing: 8px;
+    --fcc-digit-block-width: 40px;
+    --fcc-digit-block-height: 60px;
+    --fcc-digit-block-radius: 5px;
+    --fcc-digit-block-spacing: 5px;
+    --fcc-digit-font-size: 30px;
+    --fcc-digit-color: white;
+    --fcc-label-font-size: 10px;
+    --fcc-label-color: #ffffff;
+    --fcc-background: black;
+    --fcc-divider-color: white;
+    --fcc-divider-height: 1px;
+    --fcc-separator-size: 6px;
+    --fcc-separator-color: red;
+    border: 1px solid red;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'Orbitron';
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+    .page h1 {
+        font-size: 4rem;
+    }
+    .page h3 {
+        max-width: 600px;
+    }
+    .flip-clock {
+        --fcc-digit-block-width: 80px;
+        --fcc-digit-block-height: 60px;
+        --fcc-digit-font-size: 30px;
+        --fcc-digit-color: #fff;
+        --fcc-label-font-size: 10px;
+    }
+}
+
+.btn {
+    width: 180px;
+    height: 64px;
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+input[type="date"],
+input[type="time"] {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+    transition: border-color 0.3s ease;
+    margin: 10px;
+}
+
+.inputsAlign {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
